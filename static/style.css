@@ -1,0 +1,250 @@
+/* ==========================
+   الإعداد العام للصفحة
+========================== */
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #4b002d; /* نبيتي غامق جدًا */
+    color: #fff;
+    text-align: center;
+}
+
+/* ==========================
+   الهيدر
+========================== */
+header {
+    background-color: #4b002d;
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 3px solid #800000;
+}
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 0 0 10px #b22222;
+}
+
+/* ==========================
+   شبكة الصور (معرض المنتجات)
+========================== */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    justify-items: center;
+}
+
+.image-grid .product {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 220px; /* حجم ثابت لكل المنتج */
+    height: 330px; /* يشمل الصورة + السعر + الزر */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.image-grid .product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+.image-grid .product img {
+    width: 100%;
+    height: 220px; /* كل الصور بنفس الارتفاع */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ==========================
+   السعر وزر الشراء
+========================== */
+.product .price {
+    font-weight: bold;
+    color: #4b002d; /* سعر بلون غامق */
+    font-size: 17px;
+    margin: 10px 0 5px 0;
+}
+
+.buy-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #800000, #b22222);
+    color: #fff;
+    padding: 12px 25px; /* أكبر شويه */
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    cursor: pointer;
+    border: none;
+}
+
+.buy-btn:hover {
+    background: linear-gradient(45deg, #b22222, #800000);
+    transform: scale(1.05);
+}
+
+/* ==========================
+   نافذة عرض الصور (Popup)
+========================== */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.popup-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 12px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+.close:hover {
+    color: #ffcc00;
+}
+
+/* ==========================
+   صفحة الطلب (Order Page)
+========================== */
+form {
+    background: #fff; /* خلفية بيضاء للنموذج */
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 6px 18px rgba(128,0,0,0.3);
+    border-top: 5px solid #4b002d; /* خط نبيتي غامق */
+}
+
+form h2 {
+    color: #4b002d;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #4b002d;
+    text-align: right;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+button.submit-btn {
+    margin-top: 20px;
+    padding: 14px;
+    width: 100%;
+    background: linear-gradient(45deg, #800000, #b22222);
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button.submit-btn:hover {
+    background: linear-gradient(45deg, #b22222, #800000);
+    transform: scale(1.03);
+}
+
+/* أيقونة السلة */
+.cart-icon {
+    position: fixed;       /* ثابت على الشاشة */
+    top: 20px;             /* مسافة من أعلى الصفحة */
+    right: 20px;           /* مسافة من أقصى اليمين */
+    background: teal;      /* لون الخلفية */
+    color: white;          /* لون النص */
+    padding: 10px 15px;    /* حجم الإطار */
+    border-radius: 50px;   /* حواف دائرية */
+    font-size: 18px;       /* حجم الأيقونة */
+    text-decoration: none; /* إزالة الخط السفلي */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.cart-icon:hover {
+    background: #006666;
+}
+
+/* عداد السلة */
+#cart-count {
+    background: red;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 14px;
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+/* تنسيق أيقونة السلة */
+.cart-icon {
+    position: fixed;      /* ثابت على الشاشة مهما تم التمرير */
+    top: 50px;            /* مسافة من الأعلى */
+    right: 10px;          /* مسافة من اليمين */
+    background: teal;     /* لون الخلفية */
+    color: white;         /* لون الأيقونة */
+    padding: 10px 15px;   /* مساحة داخلية */
+    border-radius: 50%;   /* شكل دائري */
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 1000;        /* فوق كل العناصر */
+}
+
+/* أيقونة السلة الجميلة */
+.cart-icon {
+    position: fixed;      /* ثابت على الشاشة */
+    top: 20px;            /* مسافة من الأعلى */
+    right: 20px;          /* مسافة من اليمين */
+    background: teal;     /* لون الخلفية */
+    color: white;         /* لون الأيقونة */
+    font-size: 24px;      /* حجم الرمز */
+    padding: 15px;        /* مساحة داخلية */
+    border-radius: 50%;   /* شكل دائري */
+    text-align: center;   /* محاذاة محتوى داخل الدائرة */
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* ظل خفيف */
+    transition: transform 0.2s, box-shadow 0.2s; /* تأثير حركة خفيف */
+    z-index: 1000;
+}
+
+/* تأثير عند المرور على السلة */
+.cart-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+

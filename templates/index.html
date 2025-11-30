@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daye - الطرح الكويتية</title>
+
+  <!-- ربط ملف التنسيق -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <!-- أيقونات Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+
+<body>
+
+  <!-- شريط العنوان -->
+  <header>
+    <h1>✨ 𝐃𝐀𝐘𝐄 ✨</h1>
+<!-- أيقونة سلة المشتريات -->
+<!-- أيقونة سلة المشتريات -->
+<!-- أيقونة السلة -->
+<a href="{{ url_for('cart') }}" class="cart-icon">
+    🛒
+</a>
+
+
+  </header>
+
+  <!-- قسم الصور -->
+  <section class="gallery">
+
+    <h2>مجموعة الطرح </h2>
+
+<div class="image-grid">
+
+  <!-- تم تحويل كل صورة إلى عنصر منتج -->
+ <div class="image-grid">
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord1.jpg') }}">
+    <p class="price">السعر: 250 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+1&price=250">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord2.jpg') }}">
+    <p class="price">السعر: 215 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+2&price=215">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord3.jpg') }}">
+    <p class="price">السعر: 240 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+3&price=240">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord4.jpg') }}">
+    <p class="price">السعر: 228 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+4&price=228">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord5.jpg') }}">
+    <p class="price">السعر: 235 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+5&price=235">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord6.jpg') }}">
+    <p class="price">السعر: 230 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+6&price=230">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord7.jpg') }}">
+    <p class="price">السعر: 220 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+7&price=220">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord8.jpg') }}">
+    <p class="price">السعر: 225 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+8&price=225">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord9.jpg') }}">
+    <p class="price">السعر: 200 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+9&price=200">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord10.jpg') }}">
+    <p class="price">السعر: 220 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+10&price=220">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord11.jpg') }}">
+    <p class="price">السعر: 190 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+11&price=190">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord12.jpg') }}">
+    <p class="price">السعر: 210 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+12&price=210">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord13.jpg') }}">
+    <p class="price">السعر: 199 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+13&price=199">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord14.jpg') }}">
+    <p class="price">السعر: 270 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+14&price=270">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord15.jpg') }}">
+    <p class="price">السعر: 140 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+15&price=140">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord16.jpg') }}">
+    <p class="price">السعر: 200 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+16&price=200">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord17.jpg') }}">
+    <p class="price">السعر: 160 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+17&price=160">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord18.jpg') }}">
+    <p class="price">السعر: 255 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+18&price=255">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord19.jpg') }}">
+    <p class="price">السعر: 300 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+19&price=300">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord20.jpg') }}">
+    <p class="price">السعر: 190 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+20&price=190">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord21.jpg') }}">
+    <p class="price">السعر: 170 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+21&price=170">شراء</a>
+</div>
+
+<div class="product">
+    <img src="{{ url_for('static', filename='images/pord22.jpg') }}">
+    <p class="price">السعر: 180 جنيه</p>
+    <a class="buy-btn" href="{{ url_for('order') }}?name=طرحة+22&price=180">شراء</a>
+</div>
+
+</div>
+
+
+</div>
+    
+<!-- نافذة عرض الصورة -->
+  <div id="popup" class="popup">
+    <span class="close">&times;</span>
+    <img class="popup-content" id="popup-img">
+  </div>
+
+  </section>
+
+
+
+
+  <!-- وصف -->
+  <section class="hero">
+    <h2>مع ضيّ هتتميزي بالوان وخامه 
+بتتكلم عن نفسها بخامتها والوانها</h2>
+    <p>ألوان مبهرة وخامات راقية تمنحك أناقة لا مثيل لها 🌸</p>
+  </section>
+
+ 
+
+  
+
+  <footer>
+    <p>© 2025 Daye - جميع الحقوق محفوظة</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+<footer class="footer">
+  <h3>تابعونا وتواصلوا معنا</h3>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/daye_scarf20" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/share/g/1BzXEEnPxg/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.tiktok.com/@daye_scarf20" target="_blank"><i class="fab fa-tiktok"></i></a>
+  </div>
+</footer>
+
+    
+
+<script>
+const popup = document.getElementById("popup");
+const popupImg = document.getElementById("popup-img");
+const closeBtn = document.querySelector(".close");
+
+document.querySelectorAll(".image-grid img").forEach(img => {
+  img.addEventListener("click", () => {
+    popup.style.display = "block";
+    popupImg.src = img.src;
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+
+popup.addEventListener("click", e => {
+  if (e.target === popup) popup.style.display = "none";
+});
+</script>
+
+<!-- نافذة طلب شراء -->
+<div id="orderModal" class="popup" style="display:none;">
+  <div class="popup-content" style="background:#fff; padding:20px; border-radius:10px; max-width:350px; margin:auto;">
+
+    <span class="close" id="closeOrder" style="cursor:pointer;">&times;</span>
+
+    <h3>طلب شراء منتج</h3>
+<form id="orderForm" action="/submit_order" method="POST">
+
+  <label>الاسم الكامل:</label>
+  <input type="text" id="fullName" name="fullName" required>
+
+  <label>البريد الإلكتروني:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label>رقم التواصل:</label>
+  <input type="text" id="phone" name="phone" required>
+
+  <label>العنوان:</label>
+  <input type="text" id="address" name="address" required>
+
+  <label>الكمية:</label>
+  <input type="number" min="1" value="1" id="quantity" name="quantity" required>
+
+  <label>اللون:</label>
+  <input type="text" id="color" name="color">
+
+  <label>طريقة الدفع:</label>
+  <select id="paymentMethod" name="paymentMethod" required>
+    <option value="cash">كاش عند الاستلام</option>
+    <option value="visa">فيزا</option>
+  </select>
+
+  <input type="hidden" id="selectedProduct" name="selectedProduct">
+
+  <br><br>
+  <button type="submit">إرسال الطلب</button>
+
+</form>
+
+  </div>
+</div>
+
+
+</body>
+</html>
+

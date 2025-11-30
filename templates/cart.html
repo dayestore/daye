@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سلة المشتريات</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>سلة المشتريات</h2>
+
+    {% if order %}
+        <p>✔️ تم تسجيل طلبك بنجاح!</p>
+        <h3>تفاصيل الطلب:</h3>
+        <ul>
+            <li>المنتج: {{ order.product }}</li>
+            <li>الكمية: {{ order.quantity }}</li>
+            <li>اللون: {{ order.color }}</li>
+            <li>طريقة الدفع: {{ order.payment }}</li>
+            <li>الاسم: {{ order.name }}</li>
+            <li>الهاتف: {{ order.phone }}</li>
+            <li>العنوان: {{ order.address }}</li>
+            <li>البريد الإلكتروني: {{ order.email }}</li>
+        </ul>
+        <p>شكراً لتسوقك معنا 🌸</p>
+    {% else %}
+        <p>سلة المشتريات فارغة.</p>
+    {% endif %}
+</body>
+</html>
+

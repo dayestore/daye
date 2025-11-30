@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب شراء منتج</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h2>طلب شراء منتج</h2>
+
+    <form method="POST" action="{{ url_for('submit_order') }}">
+        <label>الاسم الكامل:</label>
+        <input type="text" name="fullName" required>
+
+        <label>البريد الإلكتروني:</label>
+        <input type="email" name="email" required>
+
+        <label>رقم التواصل:</label>
+        <input type="text" name="phone" required>
+
+        <label>العنوان:</label>
+        <input type="text" name="address" required>
+
+        <label>اسم المنتج:</label>
+        <input type="text" name="selectedProduct" id="product-name" readonly>
+
+        <label>الكمية:</label>
+        <input type="number" name="quantity" min="1" value="1" required>
+
+        <label>اللون:</label>
+        <input type="text" name="color" placeholder="اكتب اللون هنا" required>
+
+        <label>طريقة الدفع:</label>
+        <select name="paymentMethod" required>
+            <option value="cash">كاش عند الاستلام</option>
+            <option value="visa">فيزا</option>
+        </select>
+
+        <button type="submit">طلب شراء</button>
+    </form>
+
+    <script>
+        // استقبال بيانات المنتج من الصفحة الرئيسية
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("product-name").value = params.get("name");
+    </script>
+
+</body>
+</html>
+

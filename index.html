@@ -1,123 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daye - الطرح الكويتية</title>
-
-  <!-- ربط ملف التنسيق -->
-  <link rel="stylesheet" href="style.css?v=2">
-  <!-- أيقونات Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-</head>
-
-<body>
-
-  <!-- شريط العنوان -->
-  <header>
-    <h1>✨ 𝐃𝐀𝐘𝐄 ✨</h1>
-  </header>
-
-  <!-- قسم الصور -->
-  <section class="gallery">
-
-    <h2>مجموعة الطرح </h2>
-<div class="image-grid">
-  <img src="images/pord1.jpg" alt="">
-  <img src="images/pord2.jpg" alt="">
-  <img src="images/pord3.jpg" alt="">
-  <img src="images/pord4.jpg" alt="">
-  <img src="images/pord5.jpg" alt="">
-  <img src="images/pord6.jpg" alt="">
-  <img src="images/pord7.jpg" alt="">
-  <img src="images/pord8.jpg" alt="">
-  <img src="images/pord9.jpg" alt="">
-  <img src="images/pord10.jpg" alt="">
-  <img src="images/pord11.jpg" alt="">
-  <img src="images/pord12.jpg" alt="">
-  <img src="images/pord13.jpg" alt="">
-  <img src="images/pord14.jpg" alt="">
-  <img src="images/pord15.jpg" alt="">
-  <img src="images/pord16.jpg" alt="">
-  <img src="images/pord17.jpg" alt="">
-  <img src="images/pord18.jpg" alt="">
-  <img src="images/pord19.jpg" alt="">
-  <img src="images/pord20.jpg" alt="">
-  <img src="images/pord21.jpg" alt="">
-  <img src="images/pord22.jpg" alt="">
-</div>
-
-
-
-
-
-    
-<!-- نافذة عرض الصورة -->
-  <div id="popup" class="popup">
-    <span class="close">&times;</span>
-    <img class="popup-content" id="popup-img">
-  </div>
-
-  </section>
-
-
-
-
-  <!-- وصف -->
-  <section class="hero">
-    <h2>مع ضيّ هتتميزي بالوان وخامه 
-بتتكلم عن نفسها بخامتها والوانها</h2>
-    <p>ألوان مبهرة وخامات راقية تمنحك أناقة لا مثيل لها 🌸</p>
-  </section>
-
- 
-
-  
-
-  <footer>
-    <p>© 2025 Daye - جميع الحقوق محفوظة</p>
-  </footer>
-
-
-  <script src="script.js"></script>
-
-<footer class="footer">
-  <h3>تابعونا وتواصلوا معنا</h3>
-  <div class="social-icons">
-    <a href="https://www.instagram.com/daye_scarf20" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.facebook.com/share/g/1BzXEEnPxg/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.tiktok.com/@daye_scarf20" target="_blank"><i class="fab fa-tiktok"></i></a>
-  </div>
-</footer>
-
-    
-
-<script>
-const popup = document.getElementById("popup");
-const popupImg = document.getElementById("popup-img");
-const closeBtn = document.querySelector(".close");
-
-document.querySelectorAll(".image-grid img").forEach(img => {
-  img.addEventListener("click", () => {
-    popup.style.display = "block";
-    popupImg.src = img.src;
-  });
-});
-
-closeBtn.addEventListener("click", () => {
-  popup.style.display = "none";
-});
-
-popup.addEventListener("click", e => {
-  if (e.target === popup) popup.style.display = "none";
-});
-</script>
-
-
-
-</body>
-</html>
-
